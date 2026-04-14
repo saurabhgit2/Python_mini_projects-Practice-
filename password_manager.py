@@ -1,0 +1,1 @@
+pwd=input("Enter the password: ")
