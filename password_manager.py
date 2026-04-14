@@ -4,8 +4,12 @@ def view():
     with open('password.txt','r') as f:
         # running a for loop on each line and using f.readlines to read them individually
         for line in f.readlines():
-            # removing the character return or next line \n effect
-            print(line.rstrip())
+            # rstrip()-removing the character return or next line \n effect
+            # split()-Want to print user and password seperately by identifying |, making amends in code
+            data=line.rstrip()
+            user, passw=data.split("|")
+            print("User: ",user,"| Password: ",passw)
+
 def add():
     name=input("Enter your Full name: ")
     password=input("Enter your password: ")
